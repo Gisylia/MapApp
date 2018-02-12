@@ -1,6 +1,7 @@
 package com.example.a2geyog68.mappingapp;
 
 import android.preference.PreferenceManager;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Intent;
@@ -12,6 +13,7 @@ import org.osmdroid.views.MapView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import java.nio.BufferUnderflowException;
 
@@ -26,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         Configuration.getInstance().load
-                (this,PreferenceManager.getDefaultSharedPreferences (this));
+                (this, PreferenceManager.getDefaultSharedPreferences(this));
 
 
         setContentView(R.layout.activity_main);
@@ -37,6 +39,34 @@ public class MainActivity extends AppCompatActivity {
         mv.getController().setZoom(16);
 
         mv.getController().setCenter(new GeoPoint(51.05, -0.72));
+
+
+    }
+
+    public void onStart()
+
+
+    {
+        super.onStart();
+        new AlertDialog.Builder(this).
+                setPositiveButton("ok", null).
+                setMessage("onStart () called").show();
+    }
+
+
+    public void onStop()
+
+    {
+        super.onStop();
+        Toast.makeText(this, "onStop() called", Toast.LENGTH_LONG).show();
+    }
+
+
+    public void onDestroy()
+
+    {
+
+        super.onDestroy();
 
 
     }
