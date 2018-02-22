@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MappingApp.iml" filepath="$PROJECT_DIR$/MappingApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MapApp.iml" filepath="$PROJECT_DIR$/MapApp.iml" />
+      <module fileurl="file://D:\gitrepos\MapApp\MappingApp.iml" filepath="D:\gitrepos\MapApp\MappingApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://D:\gitrepos\MapApp\app\app.iml" filepath="D:\gitrepos\MapApp\app\app.iml" />
     </modules>
   </component>
 </project>
